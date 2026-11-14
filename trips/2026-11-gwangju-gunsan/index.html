@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3b2a22">
+<title>2026.11 광주 · 군산 2박 3일 여행 일정</title>
+<meta name="description" content="2026년 11월 16일(월)~18일(수) 광주·군산 2박 3일 여행 일정 — 맛집, 카페, 숙소, 드라이브 코스와 날씨 팁.">
+<meta property="og:title" content="2026.11 광주 · 군산 2박 3일 여행">
+<meta property="og:description" content="11.16 월 – 11.18 수 · 광주 → 말바우시장 → 군산 → 선유도">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+  :root{
+    --ink:#2f2621;
+    --ink-soft:#5b4c43;
+    --muted:#8a7a70;
+    --line:#e9e0d6;
+    --paper:#fbf7f1;
+    --card:#ffffff;
+    --accent:#bf5b34;
+    --accent-deep:#8f3f22;
+    --amber:#d99a3c;
+    --sage:#5f7a5b;
+    --sky:#4b6f86;
+    --shadow:0 1px 2px rgba(47,38,33,.04), 0 8px 24px rgba(47,38,33,.06);
+    --radius:18px;
+    --nav-h:56px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕","Noto Sans KR",Roboto,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.65;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    word-break:keep-all;
+    overflow-wrap:anywhere;
+  }
+  a{color:inherit;text-decoration:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:calc(38px + env(safe-area-inset-top)) 20px 34px;
+    color:#fff8f0;
+    background:
+      radial-gradient(120% 90% at 12% 8%, rgba(217,154,60,.42) 0%, rgba(217,154,60,0) 55%),
+      radial-gradient(100% 80% at 92% 0%, rgba(191,91,52,.45) 0%, rgba(191,91,52,0) 60%),
+      linear-gradient(168deg,#43302a 0%,#5a3b2d 52%,#3b2a22 100%);
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px);
+    background-size:22px 22px;
+    opacity:.35;
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;max-width:720px;margin:0 auto;z-index:1;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:12.5px;letter-spacing:.14em;
+    color:#f0d7bd;font-weight:600;
+    border:1px solid rgba(240,215,189,.38);
+    border-radius:999px;padding:5px 12px;
+    margin-bottom:16px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--amber);}
+  .hero h1{
+    margin:0;
+    font-size:clamp(26px,7.6vw,40px);
+    line-height:1.28;
+    letter-spacing:-.02em;
+    font-weight:800;
+  }
+  .hero h1 .thin{display:block;font-size:.62em;font-weight:600;color:#f1dcc8;letter-spacing:0;margin-top:8px;}
+  .hero-date{
+    margin:18px 0 0;
+    font-size:14.5px;
+    color:#ead2ba;
+    display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;
+  }
+  .hero-date .sep{opacity:.45;}
+  .route{
+    margin:22px 0 0;
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+    font-size:13.5px;color:#f6e6d5;
+  }
+  .route .node{
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:9px;padding:4px 10px;
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+  }
+  .route .arrow{color:var(--amber);font-size:12px;}
+
+  /* ---------- NAV ---------- */
+  .nav-wrap{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,247,241,.92);
+    backdrop-filter:saturate(1.4) blur(12px);
+    -webkit-backdrop-filter:saturate(1.4) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;gap:8px;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    padding:10px 16px;
+    max-width:752px;margin:0 auto;
+  }
+  .nav::-webkit-scrollbar{display:none;}
+  .nav a{
+    flex:0 0 auto;
+    font-size:13.5px;font-weight:600;
+    color:var(--ink-soft);
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:7px 14px;
+    white-space:nowrap;
+    transition:background .18s,color .18s,border-color .18s;
+  }
+  .nav a .n{color:var(--muted);font-weight:700;margin-right:5px;font-size:12px;}
+  .nav a.active{
+    background:var(--accent);border-color:var(--accent);color:#fff;
+    box-shadow:0 4px 12px rgba(191,91,52,.28);
+  }
+  .nav a.active .n{color:rgba(255,255,255,.75);}
+
+  /* ---------- LAYOUT ---------- */
+  main{max-width:720px;margin:0 auto;padding:0 16px 8px;}
+  section{
+    padding:34px 0 6px;
+    scroll-margin-top:calc(var(--nav-h) + 14px);
+  }
+  .day-head{display:flex;align-items:flex-start;gap:13px;margin-bottom:6px;}
+  .day-badge{
+    flex:0 0 auto;
+    width:46px;height:46px;border-radius:14px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;line-height:1;
+    background:linear-gradient(150deg,var(--accent),var(--accent-deep));
+    box-shadow:0 6px 16px rgba(143,63,34,.25);
+  }
+  .day-badge.d2{background:linear-gradient(150deg,#c98a3a,#96561f);box-shadow:0 6px 16px rgba(150,86,31,.25);}
+  .day-badge.d3{background:linear-gradient(150deg,#6b8a6a,#44603f);box-shadow:0 6px 16px rgba(68,96,63,.25);}
+  .day-badge.d4{background:linear-gradient(150deg,#5b7d94,#3b566b);box-shadow:0 6px 16px rgba(59,86,107,.25);}
+  .day-badge small{font-size:9.5px;font-weight:700;letter-spacing:.08em;opacity:.85;}
+  .day-badge b{font-size:19px;margin-top:2px;}
+  .day-title h2{
+    margin:0;
+    font-size:20px;font-weight:800;letter-spacing:-.01em;line-height:1.35;
+  }
+  .day-title .sub{font-size:13.5px;color:var(--muted);margin-top:3px;}
+
+  .weather{
+    display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 20px;
+  }
+  .wchip{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:12.5px;font-weight:600;
+    background:#fff;border:1px solid var(--line);
+    border-radius:8px;padding:5px 10px;color:var(--ink-soft);
+  }
+  .wchip.rain{background:#f2f6f8;border-color:#d8e4ea;color:var(--sky);}
+  .wchip.wind{background:#f4f6f2;border-color:#dbe3d7;color:var(--sage);}
+  .wchip.dust{background:#fdf6ea;border-color:#f0e2c9;color:#96652a;}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{
+    list-style:none;margin:0;padding:0 0 0 18px;
+    position:relative;
+  }
+  .timeline::before{
+    content:"";position:absolute;left:4px;top:10px;bottom:14px;
+    width:2px;border-radius:2px;
+    background:linear-gradient(180deg,var(--line),rgba(233,224,214,.35));
+  }
+  .item{position:relative;margin-bottom:12px;}
+  .item::before{
+    content:"";position:absolute;left:-18px;top:18px;
+    width:10px;height:10px;border-radius:50%;
+    background:#fff;border:2.5px solid var(--accent);
+    box-shadow:0 0 0 3px var(--paper);
+  }
+  .item.is-note::before{border-color:var(--amber);}
+  .item.is-stay::before{border-color:var(--sage);}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:15px 16px 14px;
+    box-shadow:var(--shadow);
+  }
+  .item.is-note .card{
+    background:#fffaf0;border-color:#f0e2c9;
+  }
+  .item.is-stay .card{
+    background:#f8faf7;border-color:#dde7d9;
+  }
+  .card-top{
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+    margin-bottom:7px;
+  }
+  .when{
+    font-size:11.5px;font-weight:800;letter-spacing:.03em;
+    color:#fff;background:var(--ink);
+    border-radius:6px;padding:3px 8px;
+    font-variant-numeric:tabular-nums;
+  }
+  .when.amber{background:var(--amber);}
+  .when.sage{background:var(--sage);}
+  .when.sky{background:var(--sky);}
+  .tag{
+    font-size:11.5px;font-weight:700;color:var(--muted);
+    border:1px solid var(--line);border-radius:6px;
+    padding:2px 7px;background:#fdfaf6;
+  }
+  .card h3{
+    margin:0 0 6px;
+    font-size:16.5px;font-weight:700;line-height:1.45;letter-spacing:-.01em;
+  }
+  .card h3 .en{font-weight:500;color:var(--muted);font-size:12.5px;}
+  .card p{margin:0;font-size:14px;color:var(--ink-soft);line-height:1.7;}
+  .card p + p{margin-top:6px;}
+  .addr{
+    display:flex;gap:6px;align-items:flex-start;
+    font-size:12.5px;color:var(--muted);margin-top:8px;
+  }
+  .addr svg{flex:0 0 auto;margin-top:3px;}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+  .chips span{
+    font-size:12px;font-weight:600;color:var(--ink-soft);
+    background:#f7f1e9;border-radius:6px;padding:3px 8px;
+  }
+  .map{
+    display:inline-flex;align-items:center;gap:6px;
+    margin-top:11px;
+    font-size:13px;font-weight:700;
+    color:var(--accent-deep);
+    background:#fdf1ea;
+    border:1px solid #f2d8ca;
+    border-radius:10px;
+    padding:8px 12px;
+  }
+  .map:active{background:#f9e3d7;}
+  .map svg{flex:0 0 auto;}
+  .alt{
+    display:flex;align-items:center;gap:10px;
+    margin:12px 0;
+    font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.1em;
+  }
+  .alt::before,.alt::after{content:"";height:1px;flex:1;background:var(--line);}
+  .opt{
+    border:1px dashed var(--line);border-radius:12px;
+    padding:11px 13px;margin-top:10px;background:#fdfbf8;
+  }
+  .opt h4{margin:0 0 4px;font-size:14.5px;font-weight:700;}
+  .opt p{margin:0;font-size:13.5px;color:var(--ink-soft);}
+  .avoid{
+    display:inline-block;font-size:11.5px;font-weight:700;
+    color:#9a4a33;background:#fbeae4;border-radius:5px;padding:1px 6px;margin-left:4px;
+  }
+
+  /* ---------- TIPS ---------- */
+  .tip-grid{display:grid;gap:12px;grid-template-columns:1fr;}
+  .tip{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px;box-shadow:var(--shadow);
+  }
+  .tip h3{margin:0 0 10px;font-size:15.5px;font-weight:800;display:flex;align-items:center;gap:8px;}
+  .tip h3 .ic{
+    width:26px;height:26px;border-radius:8px;flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;
+    background:#fdf1ea;color:var(--accent-deep);
+  }
+  .tip ul{margin:0;padding-left:17px;}
+  .tip li{font-size:13.8px;color:var(--ink-soft);margin-bottom:6px;line-height:1.65;}
+  .tip li:last-child{margin-bottom:0;}
+  .tip li b{color:var(--ink);font-weight:700;}
+  table.wt{width:100%;border-collapse:collapse;font-size:13.5px;}
+  table.wt th,table.wt td{
+    text-align:left;padding:9px 6px;border-bottom:1px solid var(--line);vertical-align:top;
+  }
+  table.wt th{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.04em;}
+  table.wt td:first-child{white-space:nowrap;font-weight:700;color:var(--ink);}
+  table.wt tr:last-child td{border-bottom:0;}
+
+  footer{
+    max-width:720px;margin:34px auto 0;
+    padding:22px 16px calc(30px + env(safe-area-inset-bottom));
+    text-align:center;
+    font-size:12.5px;color:var(--muted);
+    border-top:1px solid var(--line);
+  }
+  footer .f-title{font-weight:800;color:var(--ink-soft);font-size:13px;margin-bottom:4px;}
+
+  @media (min-width:640px){
+    .hero{padding:56px 28px 46px;}
+    main{padding:0 24px 8px;}
+    .tip-grid{grid-template-columns:1fr 1fr;}
+    .card{padding:17px 19px 16px;}
+    .item{margin-bottom:14px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto !important;transition:none !important;}
+  }
+  html{scroll-behavior:smooth;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow"><span class="dot"></span>2박 3일 · 가을 여행</span>
+    <h1>
+      2026.11 광주 · 군산
+      <span class="thin">2박 3일 여행 일정</span>
+    </h1>
+    <p class="hero-date">
+      <span>2026.11.16 월</span><span class="sep">–</span><span>11.18 수</span>
+      <span class="sep">·</span><span>2박 3일</span>
+    </p>
+    <div class="route">
+      <span class="node">광주</span><span class="arrow">→</span>
+      <span class="node">말바우시장</span><span class="arrow">→</span>
+      <span class="node">군산</span><span class="arrow">→</span>
+      <span class="node">선유도</span>
+    </div>
+  </div>
+</header>
+
+<div class="nav-wrap">
+  <nav class="nav" id="nav" aria-label="일차별 이동">
+    <a href="#day1"><span class="n">1일차</span>광주</a>
+    <a href="#day2"><span class="n">2일차</span>말바우시장 · 군산</a>
+    <a href="#day3"><span class="n">3일차</span>선유도 · 귀가</a>
+    <a href="#tips"><span class="n">TIP</span>날씨 · 준비물</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============ DAY 1 ============ -->
+  <section id="day1">
+    <div class="day-head">
+      <div class="day-badge"><small>DAY</small><b>1</b></div>
+      <div class="day-title">
+        <h2>광주 — 담양 길, 양림동 카페, 오리탕</h2>
+        <div class="sub">11월 16일 월요일 · 1박</div>
+      </div>
+    </div>
+
+    <div class="weather">
+      <span class="wchip">흐림</span>
+      <span class="wchip">6 ~ 18°C</span>
+      <span class="wchip">비 없음</span>
+      <span class="wchip dust">미세먼지 보통</span>
+    </div>
+
+    <ol class="timeline">
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when">오전</span><span class="tag">가는 길</span></div>
+          <h3>담양 메타세쿼이아길 · 관방제림</h3>
+          <p>동광주IC에서 20분 거리. 11월 중순이 단풍 절정이라 들렀다 가기 좋은 코스입니다. 메타세쿼이아길을 천천히 걷고, 관방제림 쪽으로 붙여서 둘러보세요.</p>
+          <div class="chips"><span>단풍 절정</span><span>동광주IC 20분</span><span>산책 코스</span></div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when amber">점심</span><span class="tag">대안</span></div>
+          <h3>송정떡갈비 1호점</h3>
+          <p>담양을 건너뛰고 바로 점심을 먹는 코스. 셋째 월요일에도 정상 영업하고, 무료 발레파킹이 됩니다.</p>
+          <div class="chips"><span>떡갈비</span><span>돼지뼛국</span><span>육회비빔밥</span><span>무료 발레파킹</span></div>
+        </div>
+      </li>
+
+      <li class="item is-stay">
+        <div class="card">
+          <div class="card-top"><span class="when sage">15:00</span><span class="tag">숙소 · 체크인</span></div>
+          <h3>L7 충장 바이 롯데호텔</h3>
+          <div class="addr">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+            <span>광주 동구 천변우로 369</span>
+          </div>
+          <div class="chips"><span>체크인 15:00</span><span>자체 + 기계식 주차</span><span>충장로 도보권</span></div>
+          <a class="map" href="http://place.map.kakao.com/715259285" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+            카카오맵에서 보기
+          </a>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when">오후</span><span class="tag">카페</span></div>
+          <h3>양림동 · 동명동 카페 (월요일 정상 영업)</h3>
+          <p>월요일에 문을 닫는 곳이 많아, 영업이 확인된 곳으로만 골랐습니다.</p>
+          <div class="opt">
+            <h4>이이남스튜디오 <span class="avoid">양림동 · 연중무휴</span></h4>
+            <p>미디어아트 작업실 겸 카페. 양림동 산책과 함께 묶기 좋습니다.</p>
+          </div>
+          <div class="opt">
+            <h4>육각커피 · 지씨디커피 <span class="avoid">양림동</span></h4>
+            <p>양림동 골목 커피. 이이남스튜디오와 도보로 이어집니다.</p>
+          </div>
+          <div class="opt">
+            <h4>물흐르듯 <span class="avoid">동명동 · 심야</span></h4>
+            <p>저녁을 먹고도 늦게까지 앉아 있기 좋은 심야 카페.</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when">저녁</span><span class="tag">저녁 · 술자리</span></div>
+          <h3>영미오리탕 본점 <span class="en">유동 오리탕 골목</span></h3>
+          <p>들깨와 미나리를 넣은 오리탕. 식후에는 광주공원 포차거리로 자리를 옮겨 한 잔.</p>
+          <div class="chips"><span>들깨 오리탕</span><span>미나리</span><span>광주공원 포차거리</span></div>
+        </div>
+      </li>
+
+      <li class="item is-note">
+        <div class="card">
+          <div class="card-top"><span class="when amber">주의</span><span class="tag">영업일</span></div>
+          <h3>빛고을한과는 월요일 휴무</h3>
+          <p>11/16(월)에는 문을 닫습니다. 다음 날 아침 오픈런으로 잡아두었으니 오늘은 들르지 마세요.</p>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ============ DAY 2 ============ -->
+  <section id="day2">
+    <div class="day-head">
+      <div class="day-badge d2"><small>DAY</small><b>2</b></div>
+      <div class="day-title">
+        <h2>말바우시장 장날 → 군산, 비 오는 오후</h2>
+        <div class="sub">11월 17일 화요일 · 1박</div>
+      </div>
+    </div>
+
+    <div class="weather">
+      <span class="wchip">10 ~ 17°C</span>
+      <span class="wchip rain">오후 늦게부터 이슬비 / 비</span>
+      <span class="wchip rain">우산 필수</span>
+    </div>
+
+    <ol class="timeline">
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when">09:00</span><span class="tag">오픈런 · 장날</span></div>
+          <h3>빛고을한과 &amp; 말바우시장</h3>
+          <p>화요일 09:00~17:30 정상 영업. 17일은 2·4·7·9일 장날이라 9시 오픈에 맞춰 가는 걸 추천합니다. 주차는 말바우시장 제3주차장.</p>
+          <div class="addr">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+            <span>광주 북구 동문대로97번길 23</span>
+          </div>
+          <div class="chips"><span>09:00 오픈</span><span>장날 (2·4·7·9)</span><span>제3주차장</span></div>
+          <a class="map" href="http://place.map.kakao.com/71481876" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+            카카오맵에서 보기
+          </a>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when amber">아침 · 점심</span><span class="tag">시장 안</span></div>
+          <h3>말바우국밥</h3>
+          <p>시장 안에서 아침 겸 점심. 장날 아침이라 자리가 붐빌 수 있으니 일찍 들어가세요.</p>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when sky">이동</span><span class="tag">드라이브</span></div>
+          <h3>광주 → 군산 <span class="en">약 1시간 30분 · 124km</span></h3>
+          <p><b>충전 팁 —</b> 군산 수퍼차저(전북 군산시 대야면 번영로 1321, GS샛별주유소). 24시간 운영, 무료 주차. 군산 들어가기 전에 들르기 좋은 위치입니다.</p>
+          <div class="chips"><span>전기차 충전</span><span>24시간</span><span>무료 주차</span></div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when amber">점심</span><span class="tag">군산 · 4곳</span></div>
+          <h3>화요일에도 여는 군산 점심</h3>
+          <p>지린성·왕산반점은 화요일 휴무라 오늘은 제외했습니다. 아래 네 곳 중에서 고르세요.</p>
+          <div class="opt">
+            <h4>복성루 <span class="avoid">10:00 ~ 16:00</span></h4>
+            <p>해물짬뽕 · 물짜장. 일찍 닫으니 점심 시간을 앞당기세요.</p>
+          </div>
+          <div class="opt">
+            <h4>쌍용반점 <span class="avoid">금동 백년가게</span></h4>
+            <p>조개짬뽕. 주차 7대뿐이라 차를 두고 가는 편이 편합니다.</p>
+          </div>
+          <div class="opt">
+            <h4>계곡가든 <span class="avoid">주차 100대</span></h4>
+            <p>꽃게장백반. 주차가 넉넉해 차로 움직이는 날에 부담이 없습니다.</p>
+          </div>
+          <div class="opt">
+            <h4>한주옥</h4>
+            <p>꽃게장 정식. 든든하게 먹고 오후 일정으로 넘어가기 좋습니다.</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="item is-stay">
+        <div class="card">
+          <div class="card-top"><span class="when sage">15:00</span><span class="tag">숙소 · 체크인</span></div>
+          <h3>라마다 바이 윈덤 군산</h3>
+          <div class="addr">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+            <span>전북 군산시 대학로 400</span>
+          </div>
+          <div class="chips"><span>체크인 15:00</span><span>체크아웃 12:00</span></div>
+          <a class="map" href="http://place.map.kakao.com/27281784" target="_blank" rel="noopener noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+            카카오맵에서 보기
+          </a>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when">오후</span><span class="tag">날씨에 따라</span></div>
+          <h3>비 오기 전 / 비가 온 뒤</h3>
+          <p>비는 오후 늦게부터라, 그 전에 야외 코스를 먼저 도는 순서가 좋습니다.</p>
+          <div class="opt">
+            <h4>비 오기 전 — 초원사진관 · 신흥동 일본식 가옥 · 동국사</h4>
+            <p>군산 근대 골목을 걷는 코스. 사진 찍으며 한두 시간이면 충분합니다.</p>
+          </div>
+          <div class="opt">
+            <h4>비가 오면 — 군산 근대역사박물관 · 옛 군산세관</h4>
+            <p>실내 위주로 바꾸면 우산만 챙기면 됩니다.</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when">저녁</span><span class="tag">저녁</span></div>
+          <h3>새만금횟집 <span class="en">또는 어시장 활어회 직거래판매장</span></h3>
+          <p>박대탕이나 회로 저녁. 어시장 쪽은 직접 골라 회를 뜨는 방식이라 취향대로 선택하면 됩니다.</p>
+          <div class="chips"><span>박대탕</span><span>회</span><span>어시장</span></div>
+        </div>
+      </li>
+
+      <li class="item is-note">
+        <div class="card">
+          <div class="card-top"><span class="when sky">야경</span><span class="tag">마무리</span></div>
+          <h3>은파호수공원 물빛다리</h3>
+          <p>저녁을 먹고 물빛다리 야경을 보고 숙소로. 비가 오면 짧게만 둘러보세요.</p>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ============ DAY 3 ============ -->
+  <section id="day3">
+    <div class="day-head">
+      <div class="day-badge d3"><small>DAY</small><b>3</b></div>
+      <div class="day-title">
+        <h2>선유도 드라이브, 그리고 귀가</h2>
+        <div class="sub">11월 18일 수요일 · 귀가</div>
+      </div>
+    </div>
+
+    <div class="weather">
+      <span class="wchip">7 ~ 13°C</span>
+      <span class="wchip wind">오후부터 강풍</span>
+      <span class="wchip">오전에 해안 드라이브</span>
+    </div>
+
+    <ol class="timeline">
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when">오전</span><span class="tag">드라이브</span></div>
+          <h3>고군산군도 — 선유도 · 장자도</h3>
+          <p>오후부터 바람이 강해지니 해안 드라이브는 오전에 끝내는 게 좋습니다. 선유도와 장자도를 잇는 다리 구간이 이 여행의 하이라이트.</p>
+          <div class="chips"><span>해안 드라이브</span><span>오전 권장</span><span>바람 대비</span></div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when amber">점심</span><span class="tag">수요일 영업</span></div>
+          <h3>지린성</h3>
+          <p>수요일 10:00 오픈. 고추짜장과 고추짬뽕이 대표 메뉴입니다. 어제 못 먹었으니 오늘 점심으로.</p>
+          <div class="chips"><span>10:00 오픈</span><span>고추짜장</span><span>고추짬뽕</span></div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when">이동</span><span class="tag">빵 쇼핑</span></div>
+          <h3>이성당</h3>
+          <p>단팥빵과 야채빵을 사서 귀가길에. 여행 마무리 선물로도 좋습니다.</p>
+          <div class="chips"><span>단팥빵</span><span>야채빵</span></div>
+        </div>
+      </li>
+
+      <li class="item is-note">
+        <div class="card">
+          <div class="card-top"><span class="when sky">귀가</span><span class="tag">운전</span></div>
+          <h3>군산 → 판교 <span class="en">약 2시간 10분</span></h3>
+          <p>오후 강풍 예보라 고속도로에서 바람을 맞을 수 있습니다. 차간 거리를 넉넉히 두고, 중간에 한 번 쉬어가세요.</p>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ============ TIPS ============ -->
+  <section id="tips">
+    <div class="day-head">
+      <div class="day-badge d4"><small>INFO</small><b>+</b></div>
+      <div class="day-title">
+        <h2>날씨 · 준비물 · 메모</h2>
+        <div class="sub">출발 전에 한 번만 확인하세요</div>
+      </div>
+    </div>
+
+    <div class="tip-grid">
+
+      <div class="tip" style="grid-column:1/-1;">
+        <h3><span class="ic">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2.2M12 18.8V21M3 12h2.2M18.8 12H21M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6"/></svg>
+        </span>3일 날씨 요약</h3>
+        <table class="wt">
+          <thead>
+            <tr><th>날짜</th><th>기온</th><th>날씨</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>11/16 월</td><td>6 ~ 18°C</td><td>흐림, 비 없음 · 미세먼지 보통</td></tr>
+            <tr><td>11/17 화</td><td>10 ~ 17°C</td><td>오후 늦게부터 이슬비 / 비</td></tr>
+            <tr><td>11/18 수</td><td>7 ~ 13°C</td><td>오후부터 강풍</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip">
+        <h3><span class="ic">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5v-7z"/><path d="M4 8.5 12 13l8-4.5M12 13v7"/></svg>
+        </span>챙길 것</h3>
+        <ul>
+          <li><b>우산</b> — 2일차 오후 늦게부터 비. 접이식 하나 더 두면 좋습니다.</li>
+          <li><b>바람막이</b> — 3일차 오후 강풍, 해안이라 체감이 더 낮습니다.</li>
+          <li><b>걷기 편한 신발</b> — 시장 골목, 근대 골목, 선유도 모두 걷습니다.</li>
+          <li><b>마스크</b> — 1일차 미세먼지 보통.</li>
+        </ul>
+      </div>
+
+      <div class="tip">
+        <h3><span class="ic">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18M5 17V9.5l3-2 3 2M11 17v-4h6v4"/><circle cx="7" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg>
+        </span>이동 · 주차 메모</h3>
+        <ul>
+          <li>광주 → 군산 <b>124km · 약 1시간 30분</b></li>
+          <li>군산 → 판교 <b>약 2시간 10분</b></li>
+          <li>L7 충장 — 자체 + 기계식 주차</li>
+          <li>말바우시장 — <b>제3주차장</b></li>
+          <li>쌍용반점 7대 · 계곡가든 100대</li>
+        </ul>
+      </div>
+
+      <div class="tip" style="grid-column:1/-1;">
+        <h3><span class="ic">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 8.5v5M12 16.6v.1"/><circle cx="12" cy="12" r="8.5"/></svg>
+        </span>휴무 · 영업 체크</h3>
+        <ul>
+          <li><b>빛고을한과</b> — 월요일 휴무. 17일(화) 09:00 오픈런으로.</li>
+          <li><b>지린성 · 왕산반점</b> — 화요일 휴무. 지린성은 18일(수) 점심으로.</li>
+          <li><b>복성루</b> — 10:00~16:00, 일찍 닫습니다.</li>
+          <li>카페는 월요일 영업이 확인된 곳으로만 골랐습니다(이이남스튜디오 연중무휴).</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="f-title">2026.11 광주 · 군산 2박 3일</div>
+  <div>11.16 월 – 11.18 수 · 날씨는 예보이니 출발 전 한 번 더 확인하세요.</div>
+</footer>
+
+<script>
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('#nav a'));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+
+  function setActive(i){
+    links.forEach(function(a,k){ a.classList.toggle('active', k === i); });
+    if(i > -1 && links[i] && links[i].scrollIntoView){
+      var nav = document.getElementById('nav');
+      var el = links[i];
+      var left = el.offsetLeft - (nav.clientWidth - el.offsetWidth) / 2;
+      if(nav.scrollTo){ nav.scrollTo({left: Math.max(0,left), behavior:'auto'}); }
+    }
+  }
+
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var idx = sections.indexOf(e.target);
+          if(idx > -1) setActive(idx);
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    sections.forEach(function(s){ if(s) io.observe(s); });
+  }
+
+  var last = -1;
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY + 120, idx = 0;
+    for(var i=0;i<sections.length;i++){
+      if(sections[i] && sections[i].offsetTop <= y) idx = i;
+    }
+    if(idx !== last){ last = idx; setActive(idx); }
+  }, {passive:true});
+
+  setActive(0);
+
+  // Map links: Kakao map URLs open in a new tab; in-app browsers fall back to same tab.
+  var maps = document.querySelectorAll('a.map');
+  for(var i=0;i<maps.length;i++){
+    maps[i].addEventListener('click', function(){
+      // no-op: default target=_blank handles it; keeps tap highlight consistent
+    });
+  }
+})();
+</script>
+</body>
+</html>
