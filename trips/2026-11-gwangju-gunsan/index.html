@@ -270,6 +270,57 @@
     color:#9a4a33;background:#fbeae4;border-radius:5px;padding:1px 6px;margin-left:4px;
   }
 
+  /* ---------- SPOT LIST ---------- */
+  .cat-head{
+    display:flex;align-items:center;gap:10px;
+    margin:26px 0 12px;
+  }
+  .cat-head h3{
+    margin:0;font-size:17px;font-weight:800;letter-spacing:-.01em;
+  }
+  .cat-head .cnt{
+    font-size:12px;font-weight:700;color:var(--muted);
+    background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 9px;
+  }
+  .cat-head .line{flex:1;height:1px;background:var(--line);}
+  .spot-grid{display:grid;gap:11px;grid-template-columns:1fr;}
+  .spot{
+    background:#fff;border:1px solid var(--line);border-radius:16px;
+    padding:14px 15px 13px;box-shadow:var(--shadow);
+  }
+  .spot-top{display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:4px;}
+  .city{
+    flex:0 0 auto;font-size:11px;font-weight:800;letter-spacing:.02em;
+    border-radius:6px;padding:2px 7px;
+  }
+  .city.gw{background:#fdf1ea;color:var(--accent-deep);border:1px solid #f2d8ca;}
+  .city.gs{background:#eef3f7;color:var(--sky);border:1px solid #d7e3ec;}
+  .spot h4{margin:0;font-size:15.5px;font-weight:800;line-height:1.4;letter-spacing:-.01em;}
+  .spot h4 .en{font-weight:500;color:var(--muted);font-size:12px;}
+  .spot .sig{margin:2px 0 0;font-size:13.5px;color:var(--ink);line-height:1.6;}
+  .spot .sig b{font-weight:800;}
+  .spot .note{margin:4px 0 0;font-size:12.5px;color:var(--muted);line-height:1.6;}
+  .days{display:flex;flex-wrap:wrap;gap:4px;margin-top:9px;}
+  .days .d{
+    font-size:11.5px;font-weight:700;border-radius:5px;padding:2px 7px;
+    border:1px solid var(--line);color:var(--muted);background:#fbf9f6;
+  }
+  .days .d.ok{color:var(--sage);background:#f4f8f2;border-color:#dde7d9;}
+  .days .d.no{color:#a4553d;background:#fbeeea;border-color:#f2d8ca;text-decoration:line-through;}
+  .btns{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px;}
+  .btns a{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:12.5px;font-weight:700;border-radius:9px;padding:7px 11px;
+    border:1px solid transparent;
+  }
+  .btns a.ng{background:#eef7f0;color:#2f7a45;border-color:#d5e9da;}
+  .btns a.bl{background:#fdf1ea;color:var(--accent-deep);border-color:#f2d8ca;}
+  .btns a:active{filter:brightness(.97);}
+  .spot-note{
+    margin:16px 0 0;font-size:12.5px;color:var(--muted);line-height:1.7;
+    background:#fffaf0;border:1px solid #f0e2c9;border-radius:12px;padding:12px 14px;
+  }
+
   /* ---------- TIPS ---------- */
   .tip-grid{display:grid;gap:12px;grid-template-columns:1fr;}
   .tip{
@@ -307,6 +358,7 @@
     .hero{padding:56px 28px 46px;}
     main{padding:0 24px 8px;}
     .tip-grid{grid-template-columns:1fr 1fr;}
+    .spot-grid{grid-template-columns:1fr 1fr;}
     .card{padding:17px 19px 16px;}
     .item{margin-bottom:14px;}
   }
@@ -344,6 +396,7 @@
     <a href="#day2"><span class="n">2일차</span>말바우시장 · 군산</a>
     <a href="#day3"><span class="n">3일차</span>선유도 · 귀가</a>
     <a href="#tips"><span class="n">TIP</span>날씨 · 준비물</a>
+    <a href="#spots"><span class="n">🍽️</span>로컬 맛집 리스트</a>
   </nav>
 </div>
 
@@ -379,10 +432,18 @@
 
       <li class="item">
         <div class="card">
-          <div class="card-top"><span class="when amber">점심</span><span class="tag">대안</span></div>
+          <div class="card-top"><span class="when amber">점심</span><span class="tag">광주 · 떡갈비</span></div>
           <h3>송정떡갈비 1호점</h3>
-          <p>담양을 건너뛰고 바로 점심을 먹는 코스. 셋째 월요일에도 정상 영업하고, 무료 발레파킹이 됩니다.</p>
-          <div class="chips"><span>떡갈비</span><span>돼지뼛국</span><span>육회비빔밥</span><span>무료 발레파킹</span></div>
+          <p>서광주IC로 들어와 바로 들르기 좋은 송정 떡갈비거리. 1976년부터 이어온 집으로, 떡갈비 1인분 18,000원에 뼈국과 반찬이 넉넉히 따라옵니다. 월요일 정상 영업(일요일 휴무)이라 첫 끼로 안성맞춤입니다.</p>
+          <div class="chips"><span>떡갈비 18,000원</span><span>육회비빔밥 12,000원</span><span>월~토 09:30~21:20</span><span>발렛 · 주차</span></div>
+          <div class="btns">
+            <a class="ng" href="https://m.place.naver.com/place/11719599/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+            <a class="bl" href="https://blog.naver.com/kevinkjh21/224469576241" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+          </div>
+          <div class="opt" style="margin-top:12px;">
+            <h4>점심 대안 — 명화식육식당 <span class="avoid">평동 · 애호박찌개 12,000원</span></h4>
+            <p>평동IC 쪽으로 들어올 때는 여기. 애호박찌개 한 메뉴뿐인데 브레이크타임이 없어 늦은 점심도 됩니다(매일 10:00~21:00).</p>
+          </div>
         </div>
       </li>
 
@@ -405,19 +466,15 @@
       <li class="item">
         <div class="card">
           <div class="card-top"><span class="when">오후</span><span class="tag">카페</span></div>
-          <h3>양림동 · 동명동 카페 (월요일 정상 영업)</h3>
-          <p>월요일에 문을 닫는 곳이 많아, 영업이 확인된 곳으로만 골랐습니다.</p>
+          <h3>양림동 카페 — 파세아르 · 육각커피</h3>
+          <p>월요일에도 문을 여는 곳으로 골랐습니다. 파세아르는 우일선 선교사 사택 뷰가 좋고(매일 12:00~21:00, 음료 5,500~8,000원), 육각커피는 이른 시간부터 열어 산책 전에 들르기 좋습니다(매일 08:30~19:00, 아메리카노 5,000원).</p>
           <div class="opt">
-            <h4>이이남스튜디오 <span class="avoid">양림동 · 연중무휴</span></h4>
-            <p>미디어아트 작업실 겸 카페. 양림동 산책과 함께 묶기 좋습니다.</p>
+            <h4>이이남스튜디오 <span class="avoid">양림동 · 매일 11:00~21:00</span></h4>
+            <p>미디어아트 작업실 겸 카페. 전시 보고 커피 한 잔 하며 앉아 있기 좋습니다.</p>
           </div>
-          <div class="opt">
-            <h4>육각커피 · 지씨디커피 <span class="avoid">양림동</span></h4>
-            <p>양림동 골목 커피. 이이남스튜디오와 도보로 이어집니다.</p>
-          </div>
-          <div class="opt">
-            <h4>물흐르듯 <span class="avoid">동명동 · 심야</span></h4>
-            <p>저녁을 먹고도 늦게까지 앉아 있기 좋은 심야 카페.</p>
+          <div class="btns">
+            <a class="ng" href="https://m.place.naver.com/place/1696194002/home" target="_blank" rel="noopener noreferrer">파세아르 지도</a>
+            <a class="ng" href="https://m.place.naver.com/place/1949632965/home" target="_blank" rel="noopener noreferrer">육각커피 지도</a>
           </div>
         </div>
       </li>
@@ -426,8 +483,29 @@
         <div class="card">
           <div class="card-top"><span class="when">저녁</span><span class="tag">저녁 · 술자리</span></div>
           <h3>영미오리탕 본점 <span class="en">유동 오리탕 골목</span></h3>
-          <p>들깨와 미나리를 넣은 오리탕. 식후에는 광주공원 포차거리로 자리를 옮겨 한 잔.</p>
-          <div class="chips"><span>들깨 오리탕</span><span>미나리</span><span>광주공원 포차거리</span></div>
+          <p>들깨를 갈아 넣은 걸죽한 오리탕에 생미나리를 데쳐 먹는 광주식. 2명이면 반마리(40,000원)부터가 적당합니다. 식후에는 광주공원 포차거리나 동명동으로 자리를 옮겨 한 잔.</p>
+          <div class="chips"><span>오리탕 반마리 40,000원</span><span>1인 약 20,000원</span><span>매일 11:00~21:00</span><span>전용 주차</span></div>
+          <div class="btns">
+            <a class="ng" href="https://m.place.naver.com/place/11718943/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+            <a class="bl" href="https://blog.naver.com/geongyul77/224469412209" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+          </div>
+          <div class="opt" style="margin-top:12px;">
+            <h4>식후 심야 — 물흐르듯 · 테사노 테라스 <span class="avoid">동명동</span></h4>
+            <p>물흐르듯은 24:00까지(핸드드립 8,000원), 테사노 테라스는 23:00까지 엽니다(커피 6,000원 · 크로플 7,000원). 둘 다 월요일 정상 영업.</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="card">
+          <div class="card-top"><span class="when amber">간식</span><span class="tag">선물 · 빵</span></div>
+          <h3>궁전제과 충장점</h3>
+          <p>숙소에서 걸어갈 수 있는 충장로. 구운 공룡알·베리프로마쥬 3,800원, 러스크 5,500원이라 몇 개만 담아도 선물이 됩니다. 21:30까지 해서 저녁 먹고 들르기 좋습니다.</p>
+          <div class="chips"><span>공룡알 3,800원</span><span>매일 10:00~21:30</span><span>충장로 도보권</span></div>
+          <div class="btns">
+            <a class="ng" href="https://m.place.naver.com/place/13297601/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+            <a class="bl" href="https://blog.naver.com/ddd_777/224475759432" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+          </div>
         </div>
       </li>
 
@@ -481,7 +559,11 @@
         <div class="card">
           <div class="card-top"><span class="when amber">아침 · 점심</span><span class="tag">시장 안</span></div>
           <h3>말바우국밥</h3>
-          <p>시장 안에서 아침 겸 점심. 장날 아침이라 자리가 붐빌 수 있으니 일찍 들어가세요.</p>
+          <p>시장 안에서 아침 겸 점심. 콩나물국밥 8,000원, 국밥류 9,000~10,000원입니다. 06:00부터 열어 장날 아침에도 일찍 들어가기 좋습니다(매월 15·30일 휴무 — 17일은 해당 없음).</p>
+          <div class="btns">
+            <a class="ng" href="https://m.place.naver.com/place/2076610406/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+            <a class="bl" href="https://blog.naver.com/gustnrdla218/224415257557" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+          </div>
         </div>
       </li>
 
@@ -496,24 +578,17 @@
 
       <li class="item">
         <div class="card">
-          <div class="card-top"><span class="when amber">점심</span><span class="tag">군산 · 4곳</span></div>
-          <h3>화요일에도 여는 군산 점심</h3>
-          <p>지린성·왕산반점은 화요일 휴무라 오늘은 제외했습니다. 아래 네 곳 중에서 고르세요.</p>
-          <div class="opt">
-            <h4>복성루 <span class="avoid">10:00 ~ 16:00</span></h4>
-            <p>해물짬뽕 · 물짜장. 일찍 닫으니 점심 시간을 앞당기세요.</p>
+          <div class="card-top"><span class="when amber">점심</span><span class="tag">군산 · 중식 노포</span></div>
+          <h3>가야장 <span class="en">경암동</span></h3>
+          <p>짜장면 6,000원인 군산 노포. 화요일에 열고(10:30~19:40) 월요일이 휴무입니다. 현금 결제는 1,000원 할인되니 참고하세요.</p>
+          <div class="chips"><span>짜장면 6,000원</span><span>탕수육 소 20,000원</span><span>화~일 10:30~19:40</span></div>
+          <div class="btns">
+            <a class="ng" href="https://m.place.naver.com/place/17160372/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+            <a class="bl" href="https://blog.naver.com/chobabsea/224342185740" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
           </div>
-          <div class="opt">
-            <h4>쌍용반점 <span class="avoid">금동 백년가게</span></h4>
-            <p>조개짬뽕. 주차 7대뿐이라 차를 두고 가는 편이 편합니다.</p>
-          </div>
-          <div class="opt">
-            <h4>계곡가든 <span class="avoid">주차 100대</span></h4>
-            <p>꽃게장백반. 주차가 넉넉해 차로 움직이는 날에 부담이 없습니다.</p>
-          </div>
-          <div class="opt">
-            <h4>한주옥</h4>
-            <p>꽃게장 정식. 든든하게 먹고 오후 일정으로 넘어가기 좋습니다.</p>
+          <div class="opt" style="margin-top:12px;">
+            <h4>참고 — 지린성은 오늘 휴무 <span class="avoid">화요일 정기휴무</span></h4>
+            <p>고추짜장을 먹으려면 3일차 점심으로. 화요일은 10:00~15:00 영업하는 곳이 많지 않으니 13시 전에 들어가세요.</p>
           </div>
         </div>
       </li>
@@ -547,23 +622,35 @@
             <h4>비가 오면 — 군산 근대역사박물관 · 옛 군산세관</h4>
             <p>실내 위주로 바꾸면 우산만 챙기면 됩니다.</p>
           </div>
+          <div class="opt">
+            <h4>골목 간식 — 군산과자조합 <span class="avoid">구영5길 · 매일 10:00~22:00</span></h4>
+            <p>초원사진관 골목의 빈티지 카페. 계란찜과자 4,500원, 약과 2,800원이라 선물용으로도 좋습니다.</p>
+          </div>
         </div>
       </li>
 
       <li class="item">
         <div class="card">
-          <div class="card-top"><span class="when">저녁</span><span class="tag">저녁</span></div>
-          <h3>새만금횟집 <span class="en">또는 어시장 활어회 직거래판매장</span></h3>
-          <p>박대탕이나 회로 저녁. 어시장 쪽은 직접 골라 회를 뜨는 방식이라 취향대로 선택하면 됩니다.</p>
-          <div class="chips"><span>박대탕</span><span>회</span><span>어시장</span></div>
+          <div class="card-top"><span class="when">저녁</span><span class="tag">저녁 · 백반</span></div>
+          <h3>토실배기 <span class="en">지곡동</span></h3>
+          <p>돼지불고기백반 13,000원(2인 이상 주문). 순한맛·매운맛 중에 고르고, 된장찌개와 반찬이 함께 나옵니다. 11:00~22:00 영업이라 저녁에 여유롭습니다 — 다만 전용 주차장이 없어 골목에서 자리를 찾아야 합니다.</p>
+          <div class="chips"><span>돼지불고기백반 13,000원</span><span>냉면 7,000원</span><span>11:00~22:00</span><span>전용 주차 없음</span></div>
+          <div class="btns">
+            <a class="ng" href="https://m.place.naver.com/place/17168498/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+            <a class="bl" href="https://blog.naver.com/wjjung1121/224474287674" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+          </div>
         </div>
       </li>
 
       <li class="item is-note">
         <div class="card">
           <div class="card-top"><span class="when sky">야경</span><span class="tag">마무리</span></div>
-          <h3>은파호수공원 물빛다리</h3>
-          <p>저녁을 먹고 물빛다리 야경을 보고 숙소로. 비가 오면 짧게만 둘러보세요.</p>
+          <h3>은파호수공원 물빛다리 → 로디드아파트먼트커피</h3>
+          <p>저녁을 먹고 호수 산책, 그리고 호숫가 카페에서 한 잔. 로디드아파트먼트커피는 화~일 11:00~21:00(월 휴무)이라 오늘은 문제없습니다. 아메리카노 5,500원 · 에그타르트 4,500원. 비가 오면 산책은 짧게.</p>
+          <div class="btns">
+            <a class="ng" href="https://m.place.naver.com/place/1556546244/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+            <a class="bl" href="https://blog.naver.com/dlfnfl0129/224416045319" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+          </div>
         </div>
       </li>
 
@@ -601,24 +688,33 @@
         <div class="card">
           <div class="card-top"><span class="when amber">점심</span><span class="tag">수요일 영업</span></div>
           <h3>지린성</h3>
-          <p>수요일 10:00 오픈. 고추짜장과 고추짬뽕이 대표 메뉴입니다. 어제 못 먹었으니 오늘 점심으로.</p>
-          <div class="chips"><span>10:00 오픈</span><span>고추짜장</span><span>고추짬뽕</span></div>
+          <p>수요일 10:00에 열어 15:00에 닫습니다 — 14시 전에는 들어가야 여유롭습니다. 고추짜장 13,000원, 짜장면 9,000원. 어제 못 먹었으니 오늘 점심으로.</p>
+          <div class="chips"><span>10:00~15:00</span><span>고추짜장 13,000원</span><span>화요일 휴무</span></div>
+          <div class="btns">
+            <a class="ng" href="https://m.place.naver.com/place/17150328/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+            <a class="bl" href="https://blog.naver.com/infowe/224474076319" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+          </div>
         </div>
       </li>
 
       <li class="item">
         <div class="card">
           <div class="card-top"><span class="when">이동</span><span class="tag">빵 쇼핑</span></div>
-          <h3>이성당</h3>
-          <p>단팥빵과 야채빵을 사서 귀가길에. 여행 마무리 선물로도 좋습니다.</p>
-          <div class="chips"><span>단팥빵</span><span>야채빵</span></div>
+          <h3>이성당 → 모락방앗간 · 영국빵집</h3>
+          <p>이성당은 단팥빵 2,000원 · 야채빵 2,500원, 매일 08:00~21:30. 중앙로에서 떡 쪽으로 바꾸려면 모락방앗간(수~일 12:00~18:00, 과일찹쌀떡 4,000~5,000원)이 좋은데 예약이 안 되니 일찍 가세요. 숙소 근처 영국빵집(대학로, 매일 08:00~21:00)도 들를 만합니다.</p>
+          <div class="chips"><span>단팥빵 2,000원</span><span>야채빵 2,500원</span><span>수요일 영업</span></div>
+          <div class="btns">
+            <a class="ng" href="https://m.place.naver.com/place/12011606/home" target="_blank" rel="noopener noreferrer">이성당 지도</a>
+            <a class="ng" href="https://m.place.naver.com/place/1471379361/home" target="_blank" rel="noopener noreferrer">모락방앗간 지도</a>
+            <a class="bl" href="https://blog.naver.com/suju_note/224467012641" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+          </div>
         </div>
       </li>
 
       <li class="item is-note">
         <div class="card">
           <div class="card-top"><span class="when sky">귀가</span><span class="tag">운전</span></div>
-          <h3>군산 → 판교 <span class="en">약 2시간 10분</span></h3>
+          <h3>군산 → 수도권 <span class="en">약 2시간 10분</span></h3>
           <p>오후 강풍 예보라 고속도로에서 바람을 맞을 수 있습니다. 차간 거리를 넉넉히 두고, 중간에 한 번 쉬어가세요.</p>
         </div>
       </li>
@@ -672,10 +768,11 @@
         </span>이동 · 주차 메모</h3>
         <ul>
           <li>광주 → 군산 <b>124km · 약 1시간 30분</b></li>
-          <li>군산 → 판교 <b>약 2시간 10분</b></li>
+          <li>군산 → 수도권 <b>약 2시간 10분</b></li>
           <li>L7 충장 — 자체 + 기계식 주차</li>
           <li>말바우시장 — <b>제3주차장</b></li>
-          <li>쌍용반점 7대 · 계곡가든 100대</li>
+          <li>토실배기 — 전용 주차 없음(골목 주차)</li>
+          <li>이이남스튜디오 — 최초 120분 무료</li>
         </ul>
       </div>
 
@@ -684,14 +781,281 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 8.5v5M12 16.6v.1"/><circle cx="12" cy="12" r="8.5"/></svg>
         </span>휴무 · 영업 체크</h3>
         <ul>
-          <li><b>빛고을한과</b> — 월요일 휴무. 17일(화) 09:00 오픈런으로.</li>
-          <li><b>지린성 · 왕산반점</b> — 화요일 휴무. 지린성은 18일(수) 점심으로.</li>
-          <li><b>복성루</b> — 10:00~16:00, 일찍 닫습니다.</li>
-          <li>카페는 월요일 영업이 확인된 곳으로만 골랐습니다(이이남스튜디오 연중무휴).</li>
+          <li><b>빛고을한과</b> — 월·수 휴무. 17일(화) 09:00 오픈런으로.</li>
+          <li><b>지린성</b> — 화요일 휴무. 18일(수) 점심, 15:00 마감.</li>
+          <li><b>가야장 · 모락방앗간</b> — 월요일 휴무(모락방앗간은 월·화).</li>
+          <li><b>파지시 · 로디드아파트먼트커피 · 노마드</b> — 파지시는 수요일, 나머지 둘은 월요일 휴무.</li>
+          <li><b>궁전제과 · 베비에르 · 이성당 · 영국빵집 · 군산과자조합</b> — 사흘 모두 영업.</li>
+          <li>카페는 월요일 영업이 확인된 곳으로만 골랐습니다(파세아르 · 육각커피 · 물흐르듯 · 테사노 테라스).</li>
         </ul>
       </div>
 
     </div>
+  </section>
+
+  <!-- ============ SPOT LIST ============ -->
+  <section id="spots">
+    <div class="day-head">
+      <div class="day-badge d4"><small>EAT</small><b>🍽️</b></div>
+      <div class="day-title">
+        <h2>로컬 맛집 리스트</h2>
+        <div class="sub">2026년 후기로 확인한 광주·군산 21곳 · 해산물 없이 · 1인 2만원 이하</div>
+      </div>
+    </div>
+
+    <p class="spot-note">
+      가격은 2026년 후기와 매장 메뉴판 기준입니다. 사흘(11/16 월 · 11/17 화 · 11/18 수) 영업 여부를 장소마다 표시했고, <b>취소선이 그날 문을 닫는 날</b>입니다. 리뷰 버튼은 2026년에 올라온 내돈내산 후기로 바로 연결됩니다.
+    </p>
+
+    <div class="cat-head"><h3>🍚 식사</h3><span class="cnt">7곳 · 1인 1만5천~2만원</span><span class="line"></span></div>
+    <div class="spot-grid">
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gw">광주</span><h4>송정떡갈비 1호점 <span class="en">송정 떡갈비거리</span></h4></div>
+        <p class="sig"><b>떡갈비 1인분 18,000원</b> · 육회비빔밥 12,000원</p>
+        <p class="note">월~토 09:30~21:20 · 일요일 휴무 · 발렛·주차</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/11719599/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/kevinkjh21/224469576241" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gw">광주</span><h4>영미오리탕 본점 <span class="en">유동 오리탕 골목</span></h4></div>
+        <p class="sig"><b>오리탕 반마리 40,000원</b>(1~2인 · 1인 약 2만원) · 한마리 61,000원</p>
+        <p class="note">매일 11:00~21:00 (주말 브레이크 15:00~17:00) · 전용 주차</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/11718943/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/geongyul77/224469412209" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gw">광주</span><h4>명화식육식당 <span class="en">평동</span></h4></div>
+        <p class="sig"><b>애호박찌개(애호박국밥) 12,000원</b> · 단일 메뉴</p>
+        <p class="note">매일 10:00~21:00 · 브레이크타임 없음 · 웨이팅 20분</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/19877647/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/bgh1563/224475645440" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gw">광주</span><h4>말바우국밥 <span class="en">말바우시장</span></h4></div>
+        <p class="sig"><b>콩나물국밥 8,000원</b> · 국밥류 9,000~10,000원</p>
+        <p class="note">매일 06:00~23:00 · 매월 15·30일 휴무</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/2076610406/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/gustnrdla218/224415257557" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gs">군산</span><h4>지린성 <span class="en">미원동</span></h4></div>
+        <p class="sig"><b>고추짜장 13,000원</b> · 짜장면 9,000원</p>
+        <p class="note">월·수~금 10:00~15:00, 토·일 09:30~16:00 · 화요일 휴무</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d no">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/17150328/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/infowe/224474076319" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gs">군산</span><h4>가야장 <span class="en">경암동 노포</span></h4></div>
+        <p class="sig"><b>짜장면 6,000원</b> · 탕수육(소) 20,000원</p>
+        <p class="note">화~일 10:30~19:40 · 월요일 휴무 · 현금 결제 1,000원 할인</p>
+        <div class="days"><span class="d no">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/17160372/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/chobabsea/224342185740" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gs">군산</span><h4>토실배기 <span class="en">지곡동</span></h4></div>
+        <p class="sig"><b>돼지불고기백반 13,000원</b>(2인 이상) · 냉면 7,000원</p>
+        <p class="note">11:00~22:00 · 전용 주차 없음 · 휴무일은 방문 전 확인</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/17168498/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/wjjung1121/224474287674" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="cat-head"><h3>☕ 디저트 · 카페</h3><span class="cnt">7곳 · 1인 2만원 이하</span><span class="line"></span></div>
+    <div class="spot-grid">
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gw">광주</span><h4>육각커피 <span class="en">양림동</span></h4></div>
+        <p class="sig"><b>아메리카노 5,000원</b> · 디카페인 5,500원 · 타르트 4종 세트 19,000원</p>
+        <p class="note">매일 08:30~19:00 · 양림동 골목</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/1949632965/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/shin_girok/224206485583" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gw">광주</span><h4>파세아르 <span class="en">양림동 · 선교사 사택뷰</span></h4></div>
+        <p class="sig"><b>음료 5,500~8,000원</b> · 디저트 4,500~8,500원</p>
+        <p class="note">매일 12:00~21:00 (라스트오더 20:30) · 테이크아웃 20% 할인</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/1696194002/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/jbaba2667/224461595615" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gw">광주</span><h4>물흐르듯 <span class="en">동명동 · 심야</span></h4></div>
+        <p class="sig"><b>핸드드립 8,000원</b> · 콜드브루 7,000원 · 라떼 8,000원</p>
+        <p class="note">매일 11:00~24:00 · 현대세탁소 간판 카페</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/1106555512/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/tlqkekld/224448019421" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gw">광주</span><h4>테사노 테라스 <span class="en">동명동 신상</span></h4></div>
+        <p class="sig"><b>커피 6,000원</b> · 무화과 크로플 7,000원 · 젤라또</p>
+        <p class="note">매일 12:00~23:00 · 연중무휴 · 야외 테라스</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/2002524911/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/babtizz/224461048680" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gs">군산</span><h4>파지시 <span class="en">미장동</span></h4></div>
+        <p class="sig"><b>아메리카노 4,800원</b> · 휘낭시에 3,200~3,900원 · 커피 리필 2,000원</p>
+        <p class="note">09:00~21:00 (라스트오더 20:30) · 수요일 휴무 · 주차 가능</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d no">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/2076188615/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/ghksgml8543/224468858202" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gs">군산</span><h4>로디드아파트먼트커피 <span class="en">은파호수공원</span></h4></div>
+        <p class="sig"><b>아메리카노 5,500원</b> · 에그타르트 4,500원 · 시그니처 6,500원</p>
+        <p class="note">화~일 11:00~21:00 · 월요일 휴무 · 호수 산책과 함께</p>
+        <div class="days"><span class="d no">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/1556546244/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/dlfnfl0129/224416045319" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gs">군산</span><h4>노마드 <span class="en">수송동</span></h4></div>
+        <p class="sig"><b>바스크 치즈케이크 6,500원</b> · 라떼 6,000원</p>
+        <p class="note">08:30~20:00 · 월요일 휴무 · 근처 무료 주차</p>
+        <div class="days"><span class="d no">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/1235932520/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/one_star0214/224436078229" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="cat-head"><h3>🎁 선물용 간식 · 빵</h3><span class="cnt">7곳 · 2만원 이하</span><span class="line"></span></div>
+    <div class="spot-grid">
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gw">광주</span><h4>빛고을한과 <span class="en">말바우시장</span></h4></div>
+        <p class="sig"><b>현미·메밀유과 1봉 10,000원</b> · 원하는 대로 섞어 담아줌</p>
+        <p class="note">화·목 09:00~17:30, 토 10:30~17:00 · 월·수 휴무 · 오픈런</p>
+        <div class="days"><span class="d no">16 월</span><span class="d ok">17 화</span><span class="d no">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/1045162668/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/roamkat_road/224425332079" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gw">광주</span><h4>궁전제과 충장점 <span class="en">충장로</span></h4></div>
+        <p class="sig"><b>구운 공룡알·베리프로마쥬 3,800원</b> · 이거시 러스크 5,500원</p>
+        <p class="note">매일 10:00~21:30 · 휴무 없음 · 주차 없음</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/13297601/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/ddd_777/224475759432" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gw">광주</span><h4>베비에르 문화전당점 <span class="en">34년 전통 · 우리밀</span></h4></div>
+        <p class="sig"><b>마왕파이 1,500원/개</b> · 8개 세트 12,000원</p>
+        <p class="note">매일 08:30~21:00 · 주차는 인근 공영주차장</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/1478002793/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/123km_daily/224475482199" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gs">군산</span><h4>이성당 <span class="en">중앙로 · 전국 3대 빵집</span></h4></div>
+        <p class="sig"><b>단팥빵 2,000원</b> · 야채빵 2,500원</p>
+        <p class="note">월~목·일 08:00~21:30, 금·토 08:00~22:00 · 주차는 구시청광장</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/12011606/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/suju_note/224467012641" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gs">군산</span><h4>영국빵집 <span class="en">대학로 · 1984년부터</span></h4></div>
+        <p class="sig"><b>야채빵 2,500원</b> · 단팥빵 3,000원 · 누네띠네</p>
+        <p class="note">매일 08:00~21:00 · 숙소(대학로)에서 가까움</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/17137443/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/hellojvv/224468747430" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gs">군산</span><h4>군산과자조합 <span class="en">구영5길 · 빈티지</span></h4></div>
+        <p class="sig"><b>계란찜과자 4,500원</b> · 약과 2,800원 · 소금초코과자 3,200원</p>
+        <p class="note">월~금 10:00~22:00, 토·일 09:30~22:00 · 주차는 맞은편 공터</p>
+        <div class="days"><span class="d ok">16 월</span><span class="d ok">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/1403620046/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/bunny_momndad/224472936108" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+      <article class="spot">
+        <div class="spot-top"><span class="city gs">군산</span><h4>모락방앗간 <span class="en">중앙로 · 과일찹쌀떡</span></h4></div>
+        <p class="sig"><b>과일찹쌀떡 4,000~5,000원</b> · 통망고 8,500원</p>
+        <p class="note">수~일 12:00~18:00 · 월·화 휴무 · 예약 불가</p>
+        <div class="days"><span class="d no">16 월</span><span class="d no">17 화</span><span class="d ok">18 수</span></div>
+        <div class="btns">
+          <a class="ng" href="https://m.place.naver.com/place/1471379361/home" target="_blank" rel="noopener noreferrer">네이버지도</a>
+          <a class="bl" href="https://blog.naver.com/tact_1663/224468543725" target="_blank" rel="noopener noreferrer">2026 내돈내산 리뷰</a>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="spot-note">
+      <b>일정에 넣은 곳 —</b> 1일차 송정떡갈비 1호점(점심) · 영미오리탕(저녁) · 파세아르·육각커피(오후) · 궁전제과(간식) / 2일차 빛고을한과·말바우국밥(아침) · 가야장(점심) · 군산과자조합(오후) · 토실배기(저녁) · 로디드아파트먼트커피(밤) / 3일차 지린성(점심) · 이성당·모락방앗간(선물).
+    </p>
   </section>
 
 </main>
