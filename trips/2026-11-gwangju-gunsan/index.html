@@ -353,6 +353,8 @@
     border-top:1px solid var(--line);
   }
   footer .f-title{font-weight:800;color:var(--ink-soft);font-size:13px;margin-bottom:4px;}
+  footer .src{margin-top:10px;font-size:11.5px;line-height:1.6;color:var(--muted);}
+  footer .src a{color:var(--muted);text-decoration:underline;text-underline-offset:2px;}
 
   @media (min-width:640px){
     .hero{padding:56px 28px 46px;}
@@ -414,8 +416,8 @@
 
     <div class="weather">
       <span class="wchip">흐림</span>
-      <span class="wchip">6 ~ 18°C</span>
-      <span class="wchip">비 없음</span>
+      <span class="wchip">7 ~ 19°C</span>
+      <span class="wchip">비 없음 (강수확률 0%)</span>
       <span class="wchip dust">미세먼지 보통</span>
     </div>
 
@@ -531,9 +533,11 @@
     </div>
 
     <div class="weather">
-      <span class="wchip">10 ~ 17°C</span>
-      <span class="wchip rain">오후 늦게부터 이슬비 / 비</span>
+      <span class="wchip">광주 10 ~ 17°C</span>
+      <span class="wchip">군산 11 ~ 15°C</span>
+      <span class="wchip rain">오후 3시 이후 이슬비 / 비</span>
       <span class="wchip rain">우산 필수</span>
+      <span class="wchip dust">미세먼지 좋음</span>
     </div>
 
     <ol class="timeline">
@@ -613,7 +617,7 @@
         <div class="card">
           <div class="card-top"><span class="when">오후</span><span class="tag">날씨에 따라</span></div>
           <h3>비 오기 전 / 비가 온 뒤</h3>
-          <p>비는 오후 늦게부터라, 그 전에 야외 코스를 먼저 도는 순서가 좋습니다.</p>
+          <p>비는 오후 3시(군산)~4시(광주)부터라, 그 전에 야외 코스를 먼저 도는 순서가 좋습니다.</p>
           <div class="opt">
             <h4>비 오기 전 — 초원사진관 · 신흥동 일본식 가옥 · 동국사</h4>
             <p>군산 근대 골목을 걷는 코스. 사진 찍으며 한두 시간이면 충분합니다.</p>
@@ -668,8 +672,9 @@
     </div>
 
     <div class="weather">
-      <span class="wchip">7 ~ 13°C</span>
-      <span class="wchip wind">오후부터 강풍</span>
+      <span class="wchip">7 ~ 12°C</span>
+      <span class="wchip">오전 흐림 (비 없음)</span>
+      <span class="wchip wind">오후 강풍 (14시~ 이슬비)</span>
       <span class="wchip">오전에 해안 드라이브</span>
     </div>
 
@@ -743,9 +748,9 @@
             <tr><th>날짜</th><th>기온</th><th>날씨</th></tr>
           </thead>
           <tbody>
-            <tr><td>11/16 월</td><td>6 ~ 18°C</td><td>흐림, 비 없음 · 미세먼지 보통</td></tr>
-            <tr><td>11/17 화</td><td>10 ~ 17°C</td><td>오후 늦게부터 이슬비 / 비</td></tr>
-            <tr><td>11/18 수</td><td>7 ~ 13°C</td><td>오후부터 강풍</td></tr>
+            <tr><td>11/16 월</td><td>7 ~ 19°C (광주)</td><td>흐림, 비 없음(강수확률 0%) · 미세먼지 보통</td></tr>
+            <tr><td>11/17 화</td><td>10 ~ 17°C (광주)<br>11 ~ 15°C (군산)</td><td>오전 흐림 → 오후 3시 이후 이슬비 / 비(강수확률 31~61%) · 미세먼지 좋음</td></tr>
+            <tr><td>11/18 수</td><td>7 ~ 12°C (군산)</td><td>오전 흐림(비 없음) → 14시부터 이슬비(20%) · 오후 강풍(최대 29km/h)</td></tr>
           </tbody>
         </table>
       </div>
@@ -755,8 +760,8 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5v-7z"/><path d="M4 8.5 12 13l8-4.5M12 13v7"/></svg>
         </span>챙길 것</h3>
         <ul>
-          <li><b>우산</b> — 2일차 오후 늦게부터 비. 접이식 하나 더 두면 좋습니다.</li>
-          <li><b>바람막이</b> — 3일차 오후 강풍, 해안이라 체감이 더 낮습니다.</li>
+          <li><b>우산</b> — 2일차 오후 3시 이후 비. 접이식 하나 더 두면 좋습니다.</li>
+          <li><b>바람막이</b> — 3일차 오후 강풍(최대 29km/h), 해안이라 체감이 더 낮습니다.</li>
           <li><b>걷기 편한 신발</b> — 시장 골목, 근대 골목, 선유도 모두 걷습니다.</li>
           <li><b>마스크</b> — 1일차 미세먼지 보통.</li>
         </ul>
@@ -1063,6 +1068,7 @@
 <footer>
   <div class="f-title">2026.11 광주 · 군산 2박 3일</div>
   <div>11.16 월 – 11.18 수 · 날씨는 예보이니 출발 전 한 번 더 확인하세요.</div>
+  <div class="src">날씨·대기질 예보 2026-11-15 21:34 기준 · <a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener noreferrer">&#xF8FF; Weather</a> · <a href="https://www.airkorea.or.kr/" target="_blank" rel="noopener noreferrer">AirKorea · 한국환경공단</a></div>
 </footer>
 
 <script>
